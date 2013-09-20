@@ -1,4 +1,4 @@
-Number matchs app
+Invoice Number match app
 ==================
 
-Trying use Foundation Make web app
+Trying use Foundation to Make web app
