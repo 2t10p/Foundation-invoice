@@ -12,82 +12,104 @@ $(function()
          ,int7: [6700, 550]
          ,int8: [7750, 500]
          ,int9: [8770, 530]
-         ,int10: [9520, 530]
+         ,int10:  [9520, 530]
          ,thanks: [10730, 790]
+         ,sit:    [11540, 550]
       }
     });
 
-    $('#int-one')
+    $('#say-one')
         .on('click',function()
         {
             sound.play('int1');
         })
 
-    $('#int-two')
+    $('#say-two')
         .on('click',function()
         {
             sound.play('int2');
         })
 
-    $('#int-three')
+    $('#say-three')
         .on('click',function()
         {
             sound.play('int3');
         })
 
-    $('#int-four')
+    $('#say-four')
         .on('click',function()
         {
             sound.play('int4');
         })
 
-    $('#int-five')
+    $('#say-five')
         .on('click',function()
         {
             sound.play('int5');
         })
 
-    $('#int-six')
+    $('#say-six')
         .on('click',function()
         {
             sound.play('int6');
         })
 
-    $('#int-seven')
+    $('#say-seven')
         .on('click',function()
         {
             sound.play('int7');
         })
 
-    $('#int-eight')
+    $('#say-eight')
         .on('click',function()
         {
             sound.play('int8');
         })
 
-    $('#int-nine')
+    $('#say-nine')
         .on('click',function()
         {
             sound.play('int9');
         })
 
-    $('#int-ten')
+    $('#say-ten')
         .on('click',function()
         {
             sound.play('int10');
         })
 
-    $('#int-thanks')
+    $('#say-thanks')
         .on('click',function()
         {
             sound.play('thanks');
         })
 
+    $('#say-sit')
+        .on('click',function()
+        {
+            sound.play('sit');
+        })
+
+    var doPlayAudio = function()
+    {
+            sound.play('sit');
+
+    }; 
+
 
     $(document)
         .on('keydown',function(e)
         {
-            console.log(e);
+            if(95 < e.keyCode && e.keyCode < 106 ) 
+            {
+                doPlayAudio(e.keyCode);
+            }
+
+            if(47 < e.keyCode && e.keyCode < 58 ) 
+            {
+                console.log(e.keyCode);
+                doPlayAudio(e.keyCode);
+            }
         });
 
 });
