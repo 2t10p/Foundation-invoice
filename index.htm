@@ -13,53 +13,57 @@
 <body>
 
 <!-- body start -->
-  <nav class="top-bar">
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1><a href="dev.htm">對發票</a></h1>
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="dev.htm">對發票</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>設定</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li class="active"><a href="#">更新對獎資料</a></li>
+      <li class="divider"></li>
+      <li class="has-dropdown"><a href="#">功能設定</a>
+        <ul class="dropdown">
+          <li><a href="#">Dropdown Level 1b</a></li>
+          <li><a href="#">Dropdown Level 1c</a></li>
+          <li><a href="#">Dropdown Level 1d</a></li>
+        </ul>
       </li>
-      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>設定</span></a></li>
     </ul>
 
-    <section class="top-bar-section">
-      <!-- Left Nav Section -->
-      <ul class="left">
-        <li class="divider"></li>
-        <li class="active"><a href="#">更新對獎資料</a></li>
-        <li class="divider"></li>
-        <li class="has-dropdown"><a href="#">功能設定</a>
-          <ul class="dropdown">
-            <li><a href="#">Dropdown Level 1b</a></li>
-            <li><a href="#">Dropdown Level 1c</a></li>
-            <li><a href="#">Dropdown Level 1d</a></li>
-          </ul>
-        </li>
-      </ul>
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li><a href="#">Main Item 4</a></li>
+      <li class="divider show-for-small"></li>
+    </ul>
+  </section>
+</nav>
 
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider hide-for-small"></li>
-        <li><a href="#">Main Item 4</a></li>
-        <li class="divider show-for-small"></li>
-      </ul>
-    </section>
-  </nav>
-
+  <!-- Content Row -->
   <div class="row">
-    <div class="small-12 large-12 columns">
-
+    <!-- Left Grid -->
+    <div class="large-5 columns">
+  
+      <!-- Panel Row -->
       <div class="row">
-        <div class="small-12 large-4 columns">
+        <div class="small-12 large-12 columns">
           <div class="panel">
             <p>請輸入發票的末三碼</p>
           </div>
         </div>
       </div>
-
+  
+      <!-- Num Pad Row -->
       <div class="row">
-        <div class="small-12 large-4 columns">
+        <div class="small-12 large-12 columns">
           <ul class="button-group radius even-3">
             <li><a id="say-one"     href="#" class="large button">1</a></li>
             <li><a id="say-two"     href="#" class="large button">2</a></li>
@@ -83,8 +87,97 @@
         </div>
       </div>
     </div>
+  
+    <!-- Right Grid -->
+    <div class="large-7 columns">
+      <div class="row">
+        <div class="large-12 columns">
+          <!-- Invoice Info -->
+          <div>
+            <table border="0" cellspacing="1" cellpadding="0" style="background:#CBA;width:100%">
+              <tbody>
+                <tr>
+                  <th>獎&nbsp;別</th>
+                  <th>中獎號碼</th>
+                </tr>
+                <tr>
+                  <td>特別獎</td>
+                  <td>
+                    40148354<br>
+                    發票8位數號碼與上列號碼相同&nbsp;-&nbsp;獎金 1,000 萬元 
+                  </td>
+                </tr>
+                <tr>
+                  <td>特獎</td>
+                  <td>
+                    64348046<br>
+                    發票8位數號碼與上列號碼相同&nbsp;-&nbsp;獎金 200 萬元
+                  </td>
+                </tr>
+                <tr>
+                  <td>頭獎</td>
+                  <td>
+                    64782404、88904036、17250629<br>
+                    發票8位數號碼與上列號碼相同&nbsp;-&nbsp;獎金 20 萬元
+                  </td>
+                </tr>
+                <tr>
+                  <td>二獎</td>
+                  <td>
+                    發票末7位數號碼與上列號碼相同&nbsp;-&nbsp;獎金&nbsp;4 萬元
+                  </td>
+                </tr>
+                <tr>
+                  <td>三獎</td>
+                  <td>
+                    發票末6位數號碼與上列號碼相同&nbsp;-&nbsp;獎金&nbsp;1 萬元
+                  </td>
+                </tr>
+                <tr>
+                  <td>四獎</td>
+                  <td>
+                    發票末5位數號碼與上列號碼相同&nbsp;-&nbsp;獎金&nbsp;4 千元
+                  </td>
+                </tr>
+                <tr>
+                  <td>五獎</td>
+                  <td>
+                    發票末4位數號碼與上列號碼相同&nbsp;-&nbsp;獎金&nbsp;1 千元
+                  </td>
+                </tr>
+                <tr>
+                  <td>六獎</td>
+                  <td>
+                    發票末3位數號碼與上列號碼相同&nbsp;-&nbsp;獎金&nbsp;2 百元   
+                  </td>
+                </tr>
+                <tr>
+                  <td>增開六獎</td>
+                  <td>
+                    516<br>
+                    發票末3位數號碼與上列號碼相同&nbsp;-&nbsp;獎金&nbsp;2 百元
+                  </td>
+                </tr>
+                <tr>
+                  <td>領獎時間</td>
+                  <td>102/08/6 ~ 102/11/5 止</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Invoice Info End -->
+  
+        </div>
+      </div>
+    </div>
   </div>
 <!-- body end -->
+
+
+
+
+
+
 
   <!--
   <script>
