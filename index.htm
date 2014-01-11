@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-  <title>對發票</title>
+  <title>美英九對發票</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/invoice-main.css">
   <link rel="stylesheet" href="css/foundation.css">
@@ -17,7 +17,7 @@
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name">
-      <h1><a href="dev.htm">對發票</a></h1>
+      <h1><a href="dev.htm">美英九對發票</a></h1>
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>設定</span></a></li>
@@ -25,6 +25,7 @@
 
   <section class="top-bar-section">
     <!-- Left Nav Section -->
+    <!--
     <ul class="left">
       <li class="divider"></li>
       <li class="active"><a href="#">一至二月份</a></li>
@@ -32,8 +33,10 @@
       <li class="active"><a href="#">三至四月份</a></li>
       <li class="divider"></li>
     </ul>
+    -->
 
     <!-- Right Nav Section -->
+    <!--
     <ul class="right">
       <li class="has-dropdown"><a href="#">功能設定</a>
         <ul class="dropdown">
@@ -42,12 +45,11 @@
           <li><a href="#">Dropdown Level 1d</a></li>
         </ul>
       </li>
-      <!--
       <li class="divider hide-for-small"></li>
       <li><a href="#">Main Item 4</a></li>
       <li class="divider show-for-small"></li>
-      -->
     </ul>
+    -->
   </section>
 </nav>
 
@@ -60,48 +62,48 @@
       <div class="row">
         <div class="small-12 large-12 columns">
           <div class="panel">
-            <p>請輸入發票的末三碼</p>
+            <p id="input-invoice-num" class="content-right font-large">請輸入發票的末三碼</p>
           </div>
         </div>
       </div>
   
       <!-- Num Pad Row -->
       <div class="row">
-        <div class="small-12 large-12 columns">
+        <div id="numpad" class="small-12 large-12 columns">
           <ul class="button-group radius even-3">
-            <li><a id="say-one"     href="#" class="large button">1</a></li>
-            <li><a id="say-two"     href="#" class="large button">2</a></li>
-            <li><a id="say-three"   href="#" class="large button">3</a></li>
+            <li><a data-numpad="1" class="large button">1</a></li>
+            <li><a data-numpad="2" class="large button">2</a></li>
+            <li><a data-numpad="3" class="large button">3</a></li>
           </ul>
           <ul class="button-group radius even-3">
-            <li><a id="say-four"    href="#" class="large button">4</a></li>
-            <li><a id="say-five"    href="#" class="large button">5</a></li>
-            <li><a id="say-six"     href="#" class="large button">6</a></li>
+            <li><a data-numpad="4" class="large button">4</a></li>
+            <li><a data-numpad="5" class="large button">5</a></li>
+            <li><a data-numpad="6" class="large button">6</a></li>
           </ul>
           <ul class="button-group radius even-3">
-            <li><a id="say-seven"   href="#" class="large button">7</a></li>
-            <li><a id="say-eight"   href="#" class="large button">8</a></li>
-            <li><a id="say-nine"    href="#" class="large button">9</a></li>
+            <li><a data-numpad="7" class="large button">7</a></li>
+            <li><a data-numpad="8" class="large button">8</a></li>
+            <li><a data-numpad="9" class="large button">9</a></li>
           </ul>
           <ul class="button-group even-3">
-            <li><a id="say-sit"     href="#" class="large button">*</a></li>
-            <li><a id="say-ten"     href="#" class="large button">0</a></li>
-            <li><a id="say-thanks"  href="#" class="large button">#</a></li>
+            <li><a data-numpad="*" class="large button">&nbsp;</a></li>
+            <li><a data-numpad="0" class="large button">0</a></li>
+            <li><a data-numpad="CLR" class="large button">&nbsp;</a></li>
           </ul>
         </div>
       </div>
     </div>
   
     <!-- Right Grid -->
-    <div class="large-7 columns">
+    <div class="large-6 columns">
       <div class="row">
         <div class="large-12 small-12 columns">
           <!-- Invoice Info -->
           <table width="100%">
             <thead>
               <tr>
-                <td class="content-left">102年05-06月</td>
-                <td class="content-right" colspan="2">領獎期間:102年08/6~102年11/5</td>
+                <td class="content-left">102年09-10月</td>
+                <td class="content-right" colspan="2">領獎期間:102年12/6~102年3/5</td>
               </tr>
               <tr>
                 <th class="content-left">獎金</th>
@@ -113,12 +115,12 @@
               <tr>
                 <td>獎金 1,000 萬</td>
                 <td class="content-center">中八碼</td>
-                <td class="content-right"><h4>40148354</h4></td>
+                <td class="content-right"><h4>46486534</h4></td>
               </tr>
               <tr>
                 <td>獎金 200 萬元</td>
                 <td class="content-center">中八碼</td>
-                <td class="content-right"><h4>64348046</h4></td>
+                <td class="content-right"><h4>06509701</h4></td>
               </tr>
               <tr>
                 <td></td><td></td><td></td>
@@ -127,9 +129,9 @@
                 <td>獎金 20 萬元</td>
                 <td class="content-center">中八碼</td>
                 <td class="content-right" rowspan="6">
-                  <h3>64782404</h3>
-                  <h3>88904036</h3>
-                  <h3>17250629</h3>
+                  <h3>73803836</h3>
+                  <h3>48342247</h3>
+                  <h3>12784009</h3>
                 </td>
               </tr>
               <tr>
@@ -155,7 +157,7 @@
               <tr>
                 <td>加開 2 百元</td>
                 <td class="content-center">末三碼</td>
-                <td class="content-right"><h3>516</h3></td>
+                <td class="content-right"><h3>316, 226</h3></td>
               </tr>
             </tbody>
           </table>
