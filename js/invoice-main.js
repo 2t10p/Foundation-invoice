@@ -64,22 +64,9 @@ $(function()
         inputBar.html(inputBar.html() + inputNum);
     };    
 
-    var doClearInputBar = function()
-    {
-        var inputBarWord = $('#input-invoice-num');
-        
-        if(inputBarWord.text().length > 2)
-        {
-            inputBarWord.html('');
-        }
-    };
-
     var doSetInputBar = function(strDisplayContent)
     {
-        var eleInputBar = $('#input-invoice-num');
-        eleInputBar.text(strDisplayContent);
-        $.data(eleInputBar, 'isInformation', true);       
-
+        $('#input-invoice-num').text(strDisplayContent);
     };
 
     var doCheckPrize = function(intInputNum, arrPrizeList)
@@ -94,25 +81,31 @@ $(function()
     };
 
     $('#numpad li a')
-        .on('click',function()
+        .on('click',function(e)
         {
             var inputNum = this.getAttribute("data-numpad");
-        })
-
-    $(document)
-        .on('keydown',function(e)
-        {
-            var inputNum = String.fromCharCode(e.keyCode) ;
             var eleInputBar = $('#input-invoice-num');
+
+            var isShowInfo = $.data(document.body, 'isInformation');
+            if(isShowInfo)
+            {
+                doSetInputBar('');
+                $.data(document.body, 'isInformation', false); 
+            }
+
+            if(eleInputBar.text().match(/\D/) != null)
+            {
+                doSetInputBar('');
+                $.data(document.body, 'isInformation', false); 
+            }
 
             if(inputNum.match(/^\d+$/) != null)
             {
-                doClearInputBar();
                 doAppendNum(inputNum);
                 doPlayAudio(inputNum);
             }
 
-            if(eleInputBar.text().length === 3)
+            if(eleInputBar.text().match(/^\d{3}$/) != null)
             {
                 var intInputNum = parseInt(eleInputBar.text());
                 var arrPrizeList = _getInvoiceList;
@@ -121,16 +114,61 @@ $(function()
                 if (isPrizeMatch)
                 {
                     mj_say_ouch.play();
-                    doSetInputBar("中獎");
+                    doSetInputBar("有機會");
+                    $.data(document.body, 'isInformation', true); 
                 }
                 else
                 {
                     mj_say_wrong.play();
                     doSetInputBar("沒中");
-                    console.log($.data($('#input-invoice-num')));
+                    $.data(document.body, 'isInformation', true); 
                 }
+            }
+        });
 
-                doClearInputBar();
+    $(document)
+        .on('keydown',function(e)
+        {
+            var inputNum = String.fromCharCode(e.keyCode) ;
+            var eleInputBar = $('#input-invoice-num');
+
+            var isShowInfo = $.data(document.body, 'isInformation');
+            if(isShowInfo)
+            {
+                doSetInputBar('');
+                $.data(document.body, 'isInformation', false); 
+            }
+
+            if(eleInputBar.text().match(/\D/) != null)
+            {
+                doSetInputBar('');
+                $.data(document.body, 'isInformation', false); 
+            }
+
+            if(inputNum.match(/^\d+$/) != null)
+            {
+                doAppendNum(inputNum);
+                doPlayAudio(inputNum);
+            }
+
+            if(eleInputBar.text().match(/^\d{3}$/) != null)
+            {
+                var intInputNum = parseInt(eleInputBar.text());
+                var arrPrizeList = _getInvoiceList;
+                var isPrizeMatch = doCheckPrize(intInputNum, arrPrizeList);
+
+                if (isPrizeMatch)
+                {
+                    mj_say_ouch.play();
+                    doSetInputBar("有機會");
+                    $.data(document.body, 'isInformation', true); 
+                }
+                else
+                {
+                    mj_say_wrong.play();
+                    doSetInputBar("沒中");
+                    $.data(document.body, 'isInformation', true); 
+                }
             }
         });
 
