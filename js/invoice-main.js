@@ -10,36 +10,41 @@ $(function()
     };    
 
     var sound = new Howl({
-       urls:   ['audio/one-to-ten.ogg']
-      ,sprite: {
-          int1: [450, 500]
-         ,int2: [1430, 500]
-         ,int3: [2650, 500]
-         ,int4: [3550, 500]
-         ,int5: [4900, 600]
-         ,int6: [5900, 600]
-         ,int7: [6700, 550]
-         ,int8: [7750, 500]
-         ,int9: [8770, 530]
-         ,int0: [9520, 530]
+         urls:   ['audio/one-to-ten.ogg']
+        ,buffer: false
+        ,sprite: {
+             int1: [450, 500]
+            ,int2: [1430, 500]
+            ,int3: [2650, 500]
+            ,int4: [3550, 500]
+            ,int5: [4900, 600]
+            ,int6: [5900, 600]
+            ,int7: [6700, 550]
+            ,int8: [7750, 500]
+            ,int9: [8770, 530]
+            ,int0: [9520, 530]
       }
       ,volume:[2]  
     });
 
     var mj_say_zero = new Howl({
-        urls:['audio/mj-zero.ogg']
+         urls:['audio/mj-zero.ogg']
+        ,buffer: false
     });
 
     var mj_say_attention = new Howl({
-        urls:['audio/mj-attention.ogg']
+         urls:['audio/mj-attention.ogg']
+        ,buffer: false
     });
 
     var mj_say_ouch = new Howl({
-        urls:['audio/mj-ouch.ogg']
+         urls:['audio/mj-ouch.ogg']
+        ,buffer: false
     });
 
     var mj_say_wrong = new Howl({
-        urls:['audio/mj-wrong.ogg']
+         urls:['audio/mj-wrong.ogg']
+        ,buffer: false
     });
 
     var doPlayAudio = function(strPadNum)
@@ -112,7 +117,7 @@ $(function()
                 if (isPrizeMatch)
                 {
                     mj_say_ouch.play();
-                    doSetInputBar("有機會");
+                    doSetInputBar("中三碼!");
                     $.data(document.body, 'isInformation', true); 
                 }
                 else
