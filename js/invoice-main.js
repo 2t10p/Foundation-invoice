@@ -22,8 +22,6 @@ $(function()
          ,int8: [7750, 500]
          ,int9: [8770, 530]
          ,int0: [9520, 530]
-         ,thk:  [10730, 790]
-         ,sit:  [11540, 550]
       }
       ,volume:[2]  
     });
@@ -160,7 +158,7 @@ $(function()
                 if (isPrizeMatch)
                 {
                     mj_say_ouch.play();
-                    doSetInputBar("有機會");
+                    doSetInputBar("中三碼!");
                     $.data(document.body, 'isInformation', true); 
                 }
                 else

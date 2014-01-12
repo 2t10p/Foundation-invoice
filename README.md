@@ -1,11 +1,16 @@
 美英九對發票
 ==================
 
-use Foundation 4 Make a web app
+Use Foundation 4 Make a responsive web
 that can do match taiwan invoice prize
-and with two dub voice ...
+and with two funny guy voice ...
 
-and the voice is download from 
+At mobile device the voice function 
+is work not smooth
+
+
+
+The voice is download from 
 
 Bumbler to Speech
 http://zhusee2.github.io/bumbler-to-speech/
